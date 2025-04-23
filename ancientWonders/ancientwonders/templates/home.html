@@ -24,9 +24,8 @@
 
 
 {% for loc in object %}
-<hr>
-<div class='list-card'>
-    <div class='list-details'>
+<div class='list-card lc-details'>
+    <div class='list-details ld-details'>
         <a href="{{ loc.get_absolute_url }}"><h2>{{ loc.name }}</h2></a>
         <p>{{ loc.location }}</p>
         <p>{{ loc.summary }}</p>

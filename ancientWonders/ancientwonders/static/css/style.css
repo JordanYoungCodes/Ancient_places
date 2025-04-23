@@ -1,19 +1,39 @@
+:root {
+    --header-bac-color: linear-gradient(to right, #00bcd4, #002f55, #008a9c);
+    --header-text-color: rgb(255, 255, 185);
+    --header-text-shadow: 3px 3px 12px rgb(248, 248, 150);
+    --button-bac-color: rgb(0, 0, 190);
+    --button-text-color: rgb(248, 247, 206);
+    --button-shadow-color: 3px 3px 12px rgb(248, 248, 150);
+    --image-color: linear-gradient(
+      to right,
+      rgb(169, 224, 255),
+      rgb(1, 175, 255),
+      rgb(0, 0, 241)
+    );
+    --root-bac-color: rgb(3, 0, 17);
+    --root-text-color: rgb(250, 248, 235);
+    --root-text-shadow: 3px 3px 12px rgb(250, 250, 208);
+    --footer-bac-color: linear-gradient(to right, #011933, #01569c, #fffc5d);
+  }
+
 body {
-    background-color: rgb(0, 17, 43);
+    background-color: rgb(1, 0, 22);
     color: rgb(255, 255, 119);
 }
 
 .nav {
     display: flex;
-    background-color:rgb(59, 59, 252);
+    background-image:var(--header-bac-color);
     width: 100%;
+    height: 100px;
     justify-content: space-between;
 }
 
 .nav-title {
     justify-items:center;
-    color: rgb(194, 194, 1);
-    text-shadow: 4px 4px 8px white;
+    color: var(--header-text-color);
+    text-shadow: var(--header-text-shadow);
     font-size: 20px;
     padding-left: 40%;
 }
@@ -24,11 +44,27 @@ body {
     padding-right: 5%;
     justify-items: flex-end;
 }
+a:visited {
+    color:#724812
+}
+a:hover {
+    color: white;
+    background:#011933;
+    padding: 5px;
+    border:1px solid #011933;
+    border-radius: 8px;
+}
 
+.nav-links a {
+    padding: 5px;
+}
+main {
+    min-height: 90vh;
+}
 .main-image {
     height: 200px;
     width: auto;
-    border: 2px solid rgb(0, 1, 7);
+    border: 2px solid rgb(0, 2, 12);
     margin: auto 0px;
     transition: transform 0.5s ease-in-out;
 }
@@ -77,3 +113,27 @@ body {
 main {
     padding: 0px 15px;
 }
+
+
+
+
+
+
+footer {
+    margin-top: 30px;
+    position: static;
+    bottom: 0px;
+    width: 100%;
+    height: 10%;
+    background: var(--footer-bac-color);
+    align-content: center;
+    padding: 30px 30px;
+    border-top: 2px solid black;
+  }
+
+  .p1 {
+    text-align: center;
+    color: var(--root-text-color);
+    font-size: 22px;
+    
+  }
