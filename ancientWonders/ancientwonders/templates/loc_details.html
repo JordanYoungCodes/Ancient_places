@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+
+<h1>{{ object.name }}</h1>
+<h2>located in {{object.location}}</h2>
+<p>{{object.description}}</p>
+{% for image in imgs %}
+    <div class='list-card lc-details'>
+        <div class='list-details ld-details'>
+            <p>{{image.description}}</p>
+        </div>
+        <div class='list-image'>
+            <img class='main-image' src="{{ image.images.url }}" alt="{{ image.name }}">
+        </div>  
+    </div>
+{% endfor %}
+<a href="{% url 'loc_update' object.id %}"><p>update</p></a>
+</main>
+
+{% endblock content %}
+
+
+
+
+

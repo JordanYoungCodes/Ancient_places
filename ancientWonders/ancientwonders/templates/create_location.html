@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <h2>Location Info</h2>
+    {{ location_form.as_p }}
+
+    <h2>Main Image</h2>
+    {{ images_form.as_p }}
+
+    <h2>Fun Fact</h2>
+    {{ facts_form.as_p }}
+
+    <button type="submit">Submit</button>
+</form>
+</main>
+
+{% endblock content %}

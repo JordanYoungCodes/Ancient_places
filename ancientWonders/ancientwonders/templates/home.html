@@ -1,0 +1,58 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+<h1>
+    Ancient Cities
+</h1>
+<p>
+   There are many amazing historic archaeological sites around the world. The ancient Greeks noted that there were seven wonders of the ancient world. Some of those beacues of there size, and some because of their beauty. In truth, there were many more than just seven. Also let me say that five of the seven had their home in greece. So maybe the list is a little weighted. The seven wounders are the tip of the iceberg when it comes to the tenacity of ancient builders. I will be providing information on some of the best examples of human enjenuity and ability to work large scale construction.
+   
+    
+</p>
+
+<h2>
+    Archaeology Blindness
+</h2>
+<p>
+   In the modern era, archaeologists are blinded by superstition, missing evedence, technology limitations, and imagination. We take stories or recorded history as being limited by the perception of the peoples who recorded it. It is further distorted by the tech levels of the civilizations present at the time of the events being recorded.This sheds all kinds of doubt on the information, evedence, records, and oral traditions from our past and prehistory. And yet most of the oldest megalithic sites from around the world defy explanation and even our own technalogical abilities. Their reason for being built still eludes us even in our curent level of superior intelegence.
+   
+    
+</p>
+
+
+{% for loc in object %}
+<hr>
+<div class='list-card'>
+    <div class='list-details'>
+        <a href="{{ loc.get_absolute_url }}"><h2>{{ loc.name }}</h2></a>
+        <p>{{ loc.location }}</p>
+        <p>{{ loc.summary }}</p>
+        <p>Time Period {{ loc.time_period }}</p>
+        {% if loc.funfacts_set.all %}
+        <a href="{{ loc.get_absolute_url2 }}">Fun Facts</a>
+    {% endif %}
+    </div>
+    <div class='list-image'>
+    <img class='main-image'src="{{ loc.main_image.url }}" alt="{{ loc.name }}">
+    </div>
+</div>
+
+
+
+
+{% endfor %}
+
+</main>
+{% endblock content %}
+
+
+
+
+
+
+
+
+

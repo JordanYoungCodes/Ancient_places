@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %} 
+<main>
+<h1>Fun Facts About historic Sites</h1>
+<p>
+    There are certain facts and observations that i would like to highlight about many of the historic sites around the world. Some of the facts show that ancient civilizations had technology or inovation that defies our modern understanding of those ancient cultures. Some show an ability to work with materials like stone that surpasses our own ability, even with our advanced computers and machinery. There are many examples of technology that had once existed then was lost. For example, the process for making ruby glass. The process was probably discovered in the 4th century by the roman empire, but soon the secret was lost. It was later rediscovered in the 17th century. The secret ingrediant was gold, literally, gold was added to the molten glass to add the rosy color to it. Finally in 1925, R. Zsigmondy was able to explain how it worked. There are many simaler examples that may spark the curiosity in all of us. In addition to this, there are also many artifacts from history that are so mysterious that their creation has no rational explanation.
+
+
+</p>
+
+
+<h1>Fun Facts About {{loc.name}}</h1>
+{% for fact in facts  %}
+
+<div class='fact-text'>
+<p>{{fact.factText}}</p>
+<img src="{{fact.factImage.url}}" alt="{{loc.name}}">
+</div>
+
+
+
+{% endfor %}
+
+
+
+
+
+</main>
+
+
+{% endblock content %} 
+
+
+
