@@ -7,7 +7,12 @@
         </div>
         <div class='nav-links'>
             <p><a href='/'>home</a></p>
+
+            {% if user.is_superuser %}
+            
             <p><a href="{% url 'loc_create' %}">create</a></p>
+
+            {% endif %}
         </div>
     </div>
 </nav>
